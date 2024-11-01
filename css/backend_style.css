@@ -1,0 +1,410 @@
+/* GENERAL STYLES START */
+:root {
+    --sitetran-primary-color: #f6921e;
+    --sitetran-secondary-color: #29b191;
+}
+* {
+    box-sizing: border-box;
+}
+.sitetran-button-primary {
+    background-color: var(--sitetran-primary-color);
+    color: white;
+    border: 2px solid var(--sitetran-primary-color);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 5px;
+}
+.sitetran-button-primary:hover {
+    color: var(--sitetran-primary-color);
+    background-color: white;
+}
+.sitetran-button-secondary {
+    background-color: var(--sitetran-secondary-color);
+    color: white;
+    border: 2px solid var(--sitetran-secondary-color);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 5px;
+}
+.sitetran-button-secondary:hover {
+    color: var(--sitetran-secondary-color);
+    background-color: white;
+}
+/* GENERAL STYLES END */
+
+.sitetran_container {
+    width: 100%;
+    min-height: auto;
+    border: 1px solid #d1d5da;
+    border-radius: 0.5rem;
+    background: #ececec;
+}
+.sitetran_container hr {
+    border-top: 1px solid #d1d5da 10%;
+    margin: 3rem 0 2rem;
+}
+.sitetran_container .sitetran-tabs{
+    display: flex;
+    margin: 0 0rem;
+    position: relative;
+}
+.sitetran_container .sitetran-tabs li {
+    padding: 0 1rem;
+}
+.sitetran_container .sitetran-tabs li a{
+    color: #2271b1;
+    padding: 1.5rem 0;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    box-shadow: none !important;
+}
+.sitetran_container .sitetran-tabs li a:hover {
+    color: #000;
+}
+.sitetran_container .sitetran-tabs li a:active {
+    color: #000;
+}
+.sitetran_container .sitetran-tabs-basic{
+    width: 100%;
+}
+.sitetran_container .sitetran-tabs-basic::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    right: 1rem;
+    height: 1px;
+    background-color: #d1d5da;
+}
+.sitetran_container .sitetran-tabs-basic .sitetran-indicator{
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    width: 100px;
+    height: 4px;
+    background-color: #2271b1;
+    transition: all 0.2s cubic-bezier(0.36, 0, 0.66, -0.56);
+}
+.sitetran_container ul.sitetran-tabs li.sitetran-active{
+    background: #ececec;
+    color: #222;
+}
+.sitetran_container .sitetran-tab-content{
+    display: none;
+    background: #ececec;
+    padding: 15px;
+}
+.sitetran_container .sitetran-tab-content.sitetran-active{
+    display: inherit;
+}
+.sitetran_group {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px 15px 0;
+}
+.sitetran_container .sitetran_subcontainer {
+    width: 100%;
+    display: inline-block;
+}
+.sitetran_container .sitetran_label {
+    display: inline-block;
+    width: 160px;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    padding-right: 35px;
+}
+.sitetran_container .sitetran_label_data {
+    width: 75%;
+    display: inline-block;
+    float: left;
+}
+.sitetran_container h2.sitetran_header {
+    margin: 0;
+    padding: 10px;
+    background-color: #2271b1;
+    color: #fff;
+    text-transform: uppercase;
+}
+.sitetran_container #sitetran_btn_space{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.sitetran_head h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.sitetran-edit-auth-key img {
+    display: inline-block;
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+}
+.sitetran-edit-auth-key p {
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 20px;
+    margin-left: 5px;
+}
+.sitetran-edit-auth-key a.button-primary {
+    display: inline-block;
+    font-weight: bold;
+}
+.sitetran-save-auth-key > a {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.sitetran-save-auth-key input[type="text"] {
+    display: inline-block;
+    margin-right: 15px;
+    width: 300px;
+}
+.sitetran-save-auth-key input[type="text"]::placeholder {
+    color: #ada9a9;
+}
+.sitetran-save-auth-key input.button-primary {
+    font-weight: bold;
+}
+.sitetran-custom-css input.button-primary {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+.sitetran-success-message.sitetran-is-hidden {
+    display: none;
+}
+.sitetran-error-message.sitetran-is-hidden {
+    display: none;
+}
+.sitetran-loader.sitetran-is-hidden {
+    display: none;
+}
+.sitetran-success-message {
+    position: fixed;
+    bottom: 0px;
+    width: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 12px;
+    padding: 9px 11px;
+    border-style: solid;
+    border-width: 1px;
+    color: #fff;
+    border-color: rgba(41, 177, 145, 0.8);
+    background-color: rgba(41, 177, 145, 0.8);
+    font-size: 13px;
+    text-align: center;
+    border-radius: 4px;
+    z-index: 2;
+}
+.sitetran-loader {
+    position: fixed;
+    bottom: 0px;
+    width: auto;
+    left: 50%;
+    justify-content: left;
+    align-items: center;
+    transform: translateX(-50%);
+    margin-bottom: 12px;
+    padding: 9px 11px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 4px;
+}
+.sitetran-loading-circle {
+    /* margin: auto; */
+    width: 20px;
+    height: 20px;
+    border: 5px solid #8b8f92;
+    border-top: 5px solid #4f5f81;
+    border-radius: 50%;
+    animation: spinner 4s linear infinite;
+}
+@keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.sitetran-loader span {
+    margin-left: 12px;
+}
+.sitetran-close-btn {
+    position: absolute;
+    right: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    top: 20%;
+    cursor: pointer;
+}
+.sitetran-error-message {
+    position: fixed;
+    bottom: 0px;
+    width: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 12px;
+    padding: 9px 11px;
+    border-style: solid;
+    border-width: 1px;
+    color: #fff;
+    border-color: rgba(252, 125, 100, 1);
+    background-color: rgba(253, 112, 114, 0.8);
+    font-size: 13px;
+    text-align: center;
+    border-radius: 4px;
+    z-index: 2;
+}
+.sitetran_update_caches {
+    float: right;
+}
+.sitetran_head {
+    margin-bottom: 15px;
+}
+.sitetran-widget-type input:nth-of-type(2) {
+    margin-left: 25px;
+}
+.sitetran-upseo.button-primary:disabled,
+.sitetran-upseo.button-primary[disabled] {
+    cursor: not-allowed;
+}
+#sitetran-settings {
+    width: 98%;
+}
+.sitetran-widget-icon input:nth-of-type(2) {
+    margin-left: 25px;
+}
+.sitetran_group_fields_icon_selector {
+    display: inline-block;
+    margin-left: 20px;
+}
+.sitetran_group_fields_icon_label {
+    font-weight: 700;
+    font-size: 16px;
+}
+.sitetran_group_fields_icon_selector input {
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+.sitetran_icon_label {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 15px;
+}
+.sitetran_icon_label img {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.sitetran_group_fields_icon_selector input:checked +.sitetran_icon_label img {
+    box-shadow: inset 0 0 0 1px #29b191;
+    border-radius: 5px;
+}
+.sitetran_group_fields_icon_selector input:active +.sitetran_icon_label img {
+    box-shadow: inset 0 0 0 1px #29b191;
+    border-radius: 5px;
+}
+.sitetran_group_fields_custom_image_label {
+    font-size: 17px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 15px;
+}
+.sitetran-widget-icon label {
+    margin-left: 5px;
+    vertical-align: text-bottom;
+}
+.sitetran_group_fields_custom_icon .description {
+    display: block;
+    margin-top: 5px;
+}
+.sitetran-edit-auth-key.sitetran-is-hidden {
+    display: none;
+}
+.sitetran-save-auth-key.sitetran-is-hidden {
+    display: none;
+}
+.sitetran-error-message-text {
+    display: inline-block;
+    max-width: 80%;
+}
+.sitetran-error-message-text a {
+    color: #fff;
+}
+.sitetran_notice_main {
+    background: #e7f5f9;
+    display: flex;
+    align-items: center;
+}
+.sitetran_notice_main .sitetran_notice_icon {
+    position: relative;
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border-radius: 100%;
+    margin: 20px 17px 20px 5px;
+    flex-shrink: 0;
+}
+.sitetran_notice_main .sitetran_notice_icon img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 12px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+.sitetran_notice_main .sitetran_notice_content {
+    margin: 22px 0 23px;
+}
+a#sitetran-edit-auth-cancel {
+    margin-left: 5px;
+}
+.sitetran-save-auth-key {
+    display: none;
+}
+.sitetran-save-auth-key.sitetran-save-auth-key-show {
+    display: block;
+}
+.sitetran-plugin-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.sitetran-site-buttons {
+    display: flex;
+    gap: 10px;
+    height: fit-content;
+}
+#sitetran_wp_logo {
+    height: 38px;
+}
+.sitetran-info-image {
+    height: 16px;
+}
+.sitetran-table-column-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+}
